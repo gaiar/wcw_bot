@@ -10,7 +10,19 @@ general:
     enhancer: ./mod_enhancers/
     sender: ./mod_senders/
   filtering:
-    ignore_tags: ['person','car','bed', 'bench', 'tv', 'umbrella', 'sink', 'frisbee', 'broccoli', 'cake']
+    ignore_tags:
+      [
+        "person",
+        "car",
+        "bed",
+        "bench",
+        "tv",
+        "umbrella",
+        "sink",
+        "frisbee",
+        "broccoli",
+        "cake",
+      ]
     min_confidence: .55
     nms_threshold: .4
   annotation:
@@ -19,74 +31,82 @@ general:
     retries_num: 5
     retries_pause: 30
   class_colors:
-    giraffe: [255,0,0]
-    bird: [0,0,255]
-    dog: [0,255,0]
-    zebra: [106,109,90]
-    horse: [150,0,50]
-    bear: [250,100,50]
-    elephant: [160,200,70]
-    cat: [50,125,100]
+    giraffe: [255, 0, 0]
+    bird: [0, 0, 255]
+    dog: [0, 255, 0]
+    zebra: [106, 109, 90]
+    horse: [150, 0, 50]
+    bear: [250, 100, 50]
+    elephant: [160, 200, 70]
+    cat: [50, 125, 100]
 
 sources:
   wildpark_Baerencam:
     id: wildpark_Baerencam
-    url: http://77.47.7.50:8789/record/current.jpg
+    url: http://46.128.123.80:8789/record/current.jpg
     substitutions:
       title: "Bärencam: Blick auf den Bärenberg"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
     min_confidence: .8
+
   wildpark_Baerencam2:
     id: wildpark_Baerencam2
-    url: http://77.47.7.50:8788/record/current.jpg
+    url: http://46.128.123.80:8788/record/current.jpg
     substitutions:
       title: "Bärencam: Blick auf den Bärensee"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
     add_ignore_tags:
       - train
+
   wildpark_Baerencam3:
     id: wildpark_Baerencam3
-    url: http://77.47.7.50:8790/record/current.jpg
+    url: http://46.128.123.80:8790/record/current.jpg
     substitutions:
       title: "Bärencam: Bärenbox von Fred and Frode"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
+
   wildpark_Wildkatzencam:
     id: wildpark_Wildkatzencam
-    url: http://77.47.7.50:8791/record/current.jpg
+    url: http://46.128.123.80:8791/record/current.jpg
     substitutions:
       title: "Wildkatzencam: Futterplatz der Wildkatzen"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
     min_confidence: .8
+
   wildpark_Luchscam:
     id: wildpark_Luchscam
-    url: http://77.47.7.50:8792/record/current.jpg
+    url: http://46.128.123.80:8792/record/current.jpg
     add_ignore_tags:
       - microwave
     substitutions:
       title: "Luchscam: Wo schlafen die Luchse?"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
+
   wildpark_Luchscam2:
     id: wildpark_Luchscam2
-    url: http://77.47.7.50:8797/record/current.jpg
+    url: http://46.128.123.80:8797/record/current.jpg
     substitutions:
       title: "Luchscam: Futterplatz"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
     min_confidence: .8
+
   wildpark_Wolfscam:
     id: wildpark_Wolfscam
-    url: http://77.47.7.50:8793/record/current.jpg
+    url: http://46.128.123.80:8793/record/current.jpg
     substitutions:
       title: "Wolfscam: Fichtenschonung im Wolfsareal"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
+
   wildpark_Wolfscam2:
     id: wildpark_Wolfscam2
-    url: http://77.47.7.50:8794/record/current.jpg
+    url: http://46.128.123.80:8794/record/current.jpg
     substitutions:
       title: "Wolfscam: Wolfspfad"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
+
   wildpark_Wolfscam3:
     id: wildpark_Wolfscam3
-    url: http://77.47.7.50:8798/record/current.jpg
+    url: http://46.128.123.80:8798/record/current.jpg
     substitutions:
       title: "Wolfscam: Futterplatz"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
@@ -96,29 +116,60 @@ sources:
     url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/na/na.jpg
     substitutions:
       title: Naledi Game Lodge
-      browser_url: http://www.africam.com/wildlife/naledi_live_channel
+      browser_url: https://www.africam.com/wildlife/rosies-pan-at-naledi-live-wildlife-channel
     min_confidence: .7
+
   africam_Naledi2:
     id: africam_Naledi2
     url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/ce/ce.jpg
     substitutions:
       title: Cat-EYE, Naledi
-      browser_url: http://www.africam.com/wildlife/naledi_cat_eye_live_wildlife_channel
+      browser_url: https://www.africam.com/wildlife/naledi-cat-eye-live-wildlife-channel/
     min_confidence: .8
     add_ignore_tags:
       - truck
+
   africam_Nkorho:
     id: africam_Nkorho
     url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/nk/nk.jpg
     substitutions:
       title: Nkorho
-      browser_url: http://www.africam.com/wildlife/nkorho_pan_webcam
+      browser_url: https://www.africam.com/wildlife/nkorho-live-wildlife-channel/
+      
   africam_Olifants:
     id: africam_Olifants
     url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/rc/rc.jpg
     substitutions:
       title: Olifants River, Naledi
-      browser_url: http://www.africam.com/wildlife/olifants_river_live_channel
+      browser_url: https://www.africam.com/wildlife/olifants-river-live-wildlife-channel/
+
+  africam_KwaMaritane:
+    id: africam_KwaMaritane
+    url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/kw/kw.jpg
+    substitutions:
+      title: Kwa Maritane, Africa
+      browser_url: https://www.africam.com/wildlife/kwa-maritane-live-wildlife-channel/
+
+  africam_Tau:
+    id: africam_Tau
+    url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/ta/ta.jpg
+    substitutions:
+      title: Tau, Africa
+      browser_url: https://www.africam.com/wildlife/tau-live-wildlife-channel/
+
+  africam_NalediDam:
+    id: africam_NalediDam
+    url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/md/md.jpg
+    substitutions:
+      title: Naledi Dam, Africa
+      browser_url: https://www.africam.com/wildlife/naledi-dam-live-wildlife-channel/
+
+  africam_Tembe:
+    id: africam_Tembe
+    url: https://s3-us-west-2.amazonaws.com/africamdrupalfiles/cameras/tm/tm.jpg
+    substitutions:
+      title: Tembe, Africa
+      browser_url: https://www.africam.com/wildlife/tembe-live-wildlife-channel/
 
   bb_tomsk_19:
     id: bb_tomsk_19
@@ -307,294 +358,290 @@ targets:
 chains:
   webcamwatcher:
     sources:
-      # - 
+      # -
       #   module: mod_fakedownloader
       #   source: africam_Naledi
       #   parameters: {}
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
+        source: wildpark_Baerencam
+
+      - module: mod_simpledownloader
         source: wildpark_Baerencam2
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: wildpark_Baerencam3
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: wildpark_Wildkatzencam
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: wildpark_Luchscam
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: wildpark_Luchscam2
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: wildpark_Wolfscam
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: wildpark_Wolfscam2
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: wildpark_Wolfscam3
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: africam_Naledi
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: africam_Naledi2
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: africam_Nkorho
-      - 
-        module: mod_simpledownloader
+
+      - module: mod_simpledownloader
         source: africam_Olifants
+
+      - module: mod_simpledownloader
+        source: africam_KwaMaritane
+
+      - module: mod_simpledownloader
+        source: africam_Tau
+
+      - module: mod_simpledownloader
+        source: africam_NalediDam
+
+      - module: mod_simpledownloader
+        source: africam_Tembe
 
     detector: mod_yolo3detector
     filters:
-      -
-        module: mod_conffilter
-      -
-        module: mod_tagfilter
+      - module: mod_conffilter
+      - module: mod_tagfilter
         # parameters: {}
-      - 
-        module: mod_manualfilter
+      - module: mod_manualfilter
         parameters:
           suppress_list:
-            - ['africam_Naledi',[0,80,700,410],['some','bear']]
-      -
-        module: mod_repeatfilter
+            - ["africam_Naledi", [0, 80, 700, 410], ["some", "bear"]]
+      - module: mod_repeatfilter
         parameters:
           storage: wildlife
           suppress_period: 1800
     enhancers:
-      -
-        module: mod_boxerenhancer
+      - module: mod_boxerenhancer
     senders:
-      - 
-        sender_module: mod_tgsender
+      - sender_module: mod_tgsender
         annotator_module: mod_templateannotator
-        target: baimuratov_bot_group
+        target: tg_webcamwatcher
         parameters: {}
-      - 
-        sender_module: mod_saversender
+      - sender_module: mod_saversender
         annotator_module: mod_templateannotator
         target: dbg_folder
   boatbot:
     sources:
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_tomsk_19
         parameters:
           check_period: 1800
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_tomsk_23
         parameters:
           check_period: 1800
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_knobi
         parameters:
           check_period: 1800
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_rnd_1
         parameters:
           check_period: 1800
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_rnd_2
         parameters:
           check_period: 1800
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_ryb_1
         parameters:
           check_period: 1800
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_ryb_2
         parameters:
           check_period: 1800
-      - 
-        module: mod_simpledownloader
+      - module: mod_simpledownloader
         source: bb_ryb_3
         parameters:
           check_period: 1800
     detector: mod_yolo3detector
     filters:
-      -
-        module: mod_conffilter
-      -
-        module: mod_tagfilter
-      - 
-        module: mod_manualfilter
+      - module: mod_conffilter
+      - module: mod_tagfilter
+      - module: mod_manualfilter
         parameters:
           suppress_list:
-            - ['bb_tomsk_23',[0,500,1800,1200],['some','boat', 'airplane']] # bb_tomsk_23
+            - [
+                "bb_tomsk_23",
+                [0, 500, 1800, 1200],
+                ["some", "boat", "airplane"],
+              ] # bb_tomsk_23
             # - ['bb_tomsk_23',[750,550,1600,750],['some','boat']]
             # - ['bb_tomsk_23',[0,600,1400,850],['some','boat']]
-            - ['bb_knobi',[210, 60, 385, 170],['boat','truck']]
-            - ['bb_knobi',[0, 123, 600, 340],['boat','truck']]
-            - ['bb_tomsk_19',[0, 570, 2000, 1100],['some','train']]
-            - ['bb_ryb_1',[0, 123, 600, 340],['boat','truck']] # bb_ryb_1
-            - ['bb_rnd_2',[-10,340,800,500],['boat','some']] # bb_rnd_2
-      -
-        module: mod_repeatfilter
+            - ["bb_knobi", [210, 60, 385, 170], ["boat", "truck"]]
+            - ["bb_knobi", [0, 123, 600, 340], ["boat", "truck"]]
+            - ["bb_tomsk_19", [0, 570, 2000, 1100], ["some", "train"]]
+            - ["bb_ryb_1", [0, 123, 600, 340], ["boat", "truck"]] # bb_ryb_1
+            - ["bb_rnd_2", [-10, 340, 800, 500], ["boat", "some"]] # bb_rnd_2
+      - module: mod_repeatfilter
         parameters:
           storage: boatbot
           suppress_period: 3600
 
     enhancers:
-      -
-        module: mod_boxerenhancer
+      - module: mod_boxerenhancer
     senders:
-      - 
-        sender_module: mod_tgsender
+      - sender_module: mod_tgsender
         annotator_module: mod_templateannotator
-        target: baimuratov_bot_group
-      - 
-        sender_module: mod_saversender
+        target: tg_wcw_boats
+      - sender_module: mod_saversender
         annotator_module: mod_templateannotator
         target: dbg_folder
-
-  boathead:
-    sources:
-      - 
-        module: mod_simpledownloader
-        source: boathead_obrazcov
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Anastasiya
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Bulgakov
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Bunin
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Esenin
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Grin
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Karamzin
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Krasin
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Krilov
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Pushkin
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Repin
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Rossiya
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Rublev
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Surikov
-        parameters:
-          check_period: 1800
-      - 
-        module: mod_simpledownloader
-        source: boathead_Viktoriya
-        parameters:
-          check_period: 1800
-    detector: mod_yolo3detector
-    filters:
-      -
-        module: mod_conffilter
-      - 
-        module: mod_sizefilter
-        parameters:
-          suppress_list:
-            - ['boathead_obrazcov',   [680000,-1],['some','boat','airplane']] # boathead_obrazcov
-            - ['boathead_Anastasiya', [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Bulgakov',   [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Bunin',      [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Esenin',     [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Grin',       [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Karamzin',   [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Krasin',     [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Krilov',     [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Pushkin',    [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Repin',      [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Rossiya',    [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Rublev',     [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Surikov',    [680000,-1],['some','boat','airplane']] # 
-            - ['boathead_Viktoriya',  [680000,-1],['some','boat','airplane']] # 
-      -
-        module: mod_tagfilter
-        # parameters: {}
-      - 
-        module: mod_manualfilter
-        parameters:
-          suppress_list:
-            - ['boathead_obrazcov',   [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Anastasiya', [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Bulgakov',   [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Bunin',      [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Esenin',     [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Grin',       [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Karamzin',   [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Krasin',     [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Krilov',     [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Pushkin',    [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Repin',      [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Rossiya',    [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Rublev',     [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Surikov',    [55,690,1850,1100],['some','boat','chair']]
-            - ['boathead_Viktoriya',  [55,690,1850,1100],['some','boat','chair']]
-      -
-        module: mod_repeatfilter
-        parameters:
-          storage: boathead
-          suppress_period: 3600
-    enhancers:
-      -
-        module: mod_boxerenhancer
-    senders:
-      - 
-        sender_module: mod_tgsender
-        annotator_module: mod_templateannotator
-        target: baimuratov_bot_group
-        parameters: {}
-      - 
-        sender_module: mod_saversender
-        annotator_module: mod_templateannotator
-        target: dbg_folder
-        
+  # boathead:
+  #   sources:
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_obrazcov
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Anastasiya
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Bulgakov
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Bunin
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Esenin
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Grin
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Karamzin
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Krasin
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Krilov
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Pushkin
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Repin
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Rossiya
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Rublev
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Surikov
+  #       parameters:
+  #         check_period: 1800
+  #     -
+  #       module: mod_simpledownloader
+  #       source: boathead_Viktoriya
+  #       parameters:
+  #         check_period: 1800
+  #   detector: mod_yolo3detector
+  #   filters:
+  #     -
+  #       module: mod_conffilter
+  #     -
+  #       module: mod_sizefilter
+  #       parameters:
+  #         suppress_list:
+  #           - ['boathead_obrazcov',   [680000,-1],['some','boat','airplane']] # boathead_obrazcov
+  #           - ['boathead_Anastasiya', [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Bulgakov',   [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Bunin',      [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Esenin',     [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Grin',       [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Karamzin',   [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Krasin',     [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Krilov',     [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Pushkin',    [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Repin',      [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Rossiya',    [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Rublev',     [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Surikov',    [680000,-1],['some','boat','airplane']] #
+  #           - ['boathead_Viktoriya',  [680000,-1],['some','boat','airplane']] #
+  #     -
+  #       module: mod_tagfilter
+  #       # parameters: {}
+  #     -
+  #       module: mod_manualfilter
+  #       parameters:
+  #         suppress_list:
+  #           - ['boathead_obrazcov',   [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Anastasiya', [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Bulgakov',   [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Bunin',      [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Esenin',     [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Grin',       [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Karamzin',   [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Krasin',     [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Krilov',     [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Pushkin',    [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Repin',      [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Rossiya',    [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Rublev',     [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Surikov',    [55,690,1850,1100],['some','boat','chair']]
+  #           - ['boathead_Viktoriya',  [55,690,1850,1100],['some','boat','chair']]
+  #     -
+  #       module: mod_repeatfilter
+  #       parameters:
+  #         storage: boathead
+  #         suppress_period: 3600
+  #   enhancers:
+  #     -
+  #       module: mod_boxerenhancer
+  #   senders:
+  #     -
+  #       sender_module: mod_tgsender
+  #       annotator_module: mod_templateannotator
+  #       target: tg_wcw_caryatid
+  #       parameters: {}
+  #     -
+  #       sender_module: mod_saversender
+  #       annotator_module: mod_templateannotator
+  #       target: dbg_folder
+  #
