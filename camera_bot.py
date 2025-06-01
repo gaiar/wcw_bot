@@ -17,8 +17,8 @@ logging.debug('Logging started')
 
 # load config
 
-cfg = yaml.load(open('config.yaml', encoding='utf-8')) # , Loader=yaml.FullLoader)
-cfg['secrets'] = yaml.load(open('secrets.yaml', encoding='utf-8')) #, Loader=yaml.FullLoader)
+cfg = yaml.load(open('config.yaml', encoding='utf-8') , Loader=yaml.FullLoader)
+cfg['secrets'] = yaml.load(open('secrets.yaml', encoding='utf-8') , Loader=yaml.FullLoader)
 logging.debug('Config loaded')
 
 # discover and install available modules

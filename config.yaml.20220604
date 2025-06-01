@@ -43,37 +43,31 @@ general:
 sources:
   wildpark_Baerencam:
     id: wildpark_Baerencam
-    url: http://5.28.64.136:8789/record/current.jpg
+    url: http://46.128.211.233:8789/record/current.jpg
     substitutions:
       title: "Bärencam: Blick auf den Bärenberg"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
-    add_ignore_tags:
-      - boat
     min_confidence: .8
 
   wildpark_Baerencam2:
     id: wildpark_Baerencam2
-    url: http://5.28.64.136:8788/record/current.jpg
+    url: http://46.128.211.233:8788/record/current.jpg
     substitutions:
       title: "Bärencam: Blick auf den Bärensee"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
     add_ignore_tags:
       - train
-      - boat
 
   wildpark_Baerencam3:
     id: wildpark_Baerencam3
-    url: http://5.28.64.136:8790/record/current.jpg
+    url: http://46.128.211.233:8790/record/current.jpg
     substitutions:
       title: "Bärencam: Bärenbox von Fred and Frode"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
-    add_ignore_tags:
-      - boat
-
 
   wildpark_Wildkatzencam:
     id: wildpark_Wildkatzencam
-    url: http://5.28.64.136:8791/record/current.jpg
+    url: http://46.128.211.233:8791/record/current.jpg
     substitutions:
       title: "Wildkatzencam: Futterplatz der Wildkatzen"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
@@ -81,7 +75,7 @@ sources:
 
   wildpark_Luchscam:
     id: wildpark_Luchscam
-    url: http://5.28.64.136:8792/record/current.jpg
+    url: http://46.128.211.233:8792/record/current.jpg
     add_ignore_tags:
       - microwave
     substitutions:
@@ -90,7 +84,7 @@ sources:
 
   wildpark_Luchscam2:
     id: wildpark_Luchscam2
-    url: http://5.28.64.136:8797/record/current.jpg
+    url: http://46.128.211.233:8797/record/current.jpg
     substitutions:
       title: "Luchscam: Futterplatz"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
@@ -105,14 +99,14 @@ sources:
 
   wildpark_Wolfscam2:
     id: wildpark_Wolfscam2
-    url: http://5.28.64.136:8794/record/current.jpg
+    url: http://46.128.211.233:8794/record/current.jpg
     substitutions:
       title: "Wolfscam: Wolfspfad"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
 
   wildpark_Wolfscam3:
     id: wildpark_Wolfscam3
-    url: http://5.28.64.136:8798/record/current.jpg
+    url: http://46.128.211.233:8798/record/current.jpg
     add_ignore_tags:
       - bicycle
     substitutions:
@@ -213,7 +207,6 @@ sources:
       browser_url: https://izvestiy-kamen.ru/vebkamera/
     add_ignore_tags:
       - chair
-      - sports ball
   bb_rnd_1:
     id: bb_rnd_1
     url: https://msk.rtsp.me/image/0WKoFCvy.jpg
@@ -374,21 +367,21 @@ sources:
       - kite
       - refrigerator
 
-#  video_Bijsk:
-#    id: video_Bijsk
-#    url: https://www.youtube-nocookie.com/embed/2vBSKsPhRb8?autoplay=1
-#    cache_time: 600
-#    substitutions:
-#      title: "Бийск."
-#      browser_url: https://www.youtube.com/watch?v=2vBSKsPhRb8
-#    add_ignore_tags:
-#      - truck
-#      - train
-#      - clock
-#      - laptop
-#      - surfboard
-#      - kite
-#      - refrigerator
+  video_Bijsk:
+    id: video_Bijsk
+    url: https://www.youtube-nocookie.com/embed/2vBSKsPhRb8?autoplay=1
+    cache_time: 600
+    substitutions:
+      title: "Бийск."
+      browser_url: https://www.youtube.com/watch?v=2vBSKsPhRb8
+    add_ignore_tags:
+      - truck
+      - train
+      - clock
+      - laptop
+      - surfboard
+      - kite
+      - refrigerator
 
   video_Valaam:
     id: video_Valaam
@@ -547,25 +540,6 @@ sources:
     substitutions:
       title: "Усть-Кут."
       browser_url: https://www.youtube.com/watch?v=lufyRx7ACs8
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-
-  video_Lensk:
-    id: video_Lensk
-    url: https://www.youtube-nocookie.com/embed/RjL1ByYJUo4?autoplay=1
-    cache_time: 1800
-    substitutions:
-      title: "Ленск."
-      browser_url: https://www.youtube.com/watch?v=RjL1ByYJUo4
     add_ignore_tags:
       - motorcycle
       - bus
@@ -779,10 +753,6 @@ chains:
 #        parameters:
 #          check_period: 1800
       - module: mod_htmlscreenshotdownloader
-        source: video_Lensk
-        parameters:
-          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
         source: video_Ustug
         parameters:
           check_period: 1800
@@ -822,10 +792,10 @@ chains:
 #        source: video_Khabarovsk
 #        parameters:
 #          check_period: 1800
-#      - module: mod_htmlscreenshotdownloader
-#        source: video_Bijsk
-#        parameters:
-#          check_period: 1800
+      - module: mod_htmlscreenshotdownloader
+        source: video_Bijsk
+        parameters:
+          check_period: 1800
       - module: mod_htmlscreenshotdownloader
         source: video_Valaam
         parameters:

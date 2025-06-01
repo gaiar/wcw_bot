@@ -2,10 +2,10 @@ version: '3.2'
 
 services:
   wcw_bot:
-    image: wcw_bot
+    image: gaiar/wcw_bot:selenium
     build: .
     ports:
-      - 3000:3000
+      - 3333:3000
     volumes:
       - type: bind
         source: ./config.yaml
@@ -16,4 +16,4 @@ services:
       - type: bind
         source: ./debug.log
         target: /app/debug.log
-      
+    restart: always  # Correct placement within the service block

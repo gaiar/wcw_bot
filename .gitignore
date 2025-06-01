@@ -3,4 +3,5 @@
 secrets.yaml
 debug.log
 yolov3.*
-
+dbg_detected/
+*.log

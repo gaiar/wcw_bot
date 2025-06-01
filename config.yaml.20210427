@@ -43,37 +43,31 @@ general:
 sources:
   wildpark_Baerencam:
     id: wildpark_Baerencam
-    url: http://5.28.64.136:8789/record/current.jpg
+    url: http://46.128.211.233:8789/record/current.jpg
     substitutions:
       title: "Bärencam: Blick auf den Bärenberg"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
-    add_ignore_tags:
-      - boat
     min_confidence: .8
 
   wildpark_Baerencam2:
     id: wildpark_Baerencam2
-    url: http://5.28.64.136:8788/record/current.jpg
+    url: http://46.128.211.233:8788/record/current.jpg
     substitutions:
       title: "Bärencam: Blick auf den Bärensee"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
     add_ignore_tags:
       - train
-      - boat
 
   wildpark_Baerencam3:
     id: wildpark_Baerencam3
-    url: http://5.28.64.136:8790/record/current.jpg
+    url: http://46.128.211.233:8790/record/current.jpg
     substitutions:
       title: "Bärencam: Bärenbox von Fred and Frode"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
-    add_ignore_tags:
-      - boat
-
 
   wildpark_Wildkatzencam:
     id: wildpark_Wildkatzencam
-    url: http://5.28.64.136:8791/record/current.jpg
+    url: http://46.128.211.233:8791/record/current.jpg
     substitutions:
       title: "Wildkatzencam: Futterplatz der Wildkatzen"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
@@ -81,7 +75,7 @@ sources:
 
   wildpark_Luchscam:
     id: wildpark_Luchscam
-    url: http://5.28.64.136:8792/record/current.jpg
+    url: http://46.128.211.233:8792/record/current.jpg
     add_ignore_tags:
       - microwave
     substitutions:
@@ -90,7 +84,7 @@ sources:
 
   wildpark_Luchscam2:
     id: wildpark_Luchscam2
-    url: http://5.28.64.136:8797/record/current.jpg
+    url: http://46.128.211.233:8797/record/current.jpg
     substitutions:
       title: "Luchscam: Futterplatz"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
@@ -105,14 +99,14 @@ sources:
 
   wildpark_Wolfscam2:
     id: wildpark_Wolfscam2
-    url: http://5.28.64.136:8794/record/current.jpg
+    url: http://46.128.211.233:8794/record/current.jpg
     substitutions:
       title: "Wolfscam: Wolfspfad"
       browser_url: https://www.wildpark-mv.de/besuch-und-service/webcams.html
 
   wildpark_Wolfscam3:
     id: wildpark_Wolfscam3
-    url: http://5.28.64.136:8798/record/current.jpg
+    url: http://46.128.211.233:8798/record/current.jpg
     add_ignore_tags:
       - bicycle
     substitutions:
@@ -150,9 +144,6 @@ sources:
     substitutions:
       title: Olifants River, Naledi
       browser_url: https://www.africam.com/wildlife/olifants-river-live-wildlife-channel/
-    add_ignore_tags:
-      - boat
-      - surfboard
 
   africam_KwaMaritane:
     id: africam_KwaMaritane
@@ -174,10 +165,6 @@ sources:
     substitutions:
       title: Naledi Dam, Africa
       browser_url: https://www.africam.com/wildlife/naledi-dam-live-wildlife-channel/
-    add_ignore_tags:
-      - vase
-      - potted plant
-      - cup
 
   africam_Tembe:
     id: africam_Tembe
@@ -193,8 +180,6 @@ sources:
     substitutions:
       title: "Томск. Трансляция реки Томь — ул. Вершинина, 47"
       browser_url: https://pogoda.vtomske.ru/tomsk/webcams
-    add_ignore_tags:
-      - surfboard
   bb_tomsk_23:
     id: bb_tomsk_23
     url: http://cdn08.vtomske.ru/stream/23.jpg
@@ -202,8 +187,6 @@ sources:
     substitutions:
       title: "Томск. Трансляция реки Томь — Речной вокзал"
       browser_url: https://pogoda.vtomske.ru/tomsk/webcams
-    add_ignore_tags:
-      - refrigerator
   bb_knobi:
     id: bb_knobi
     url: http://api.ipeye.ru/v1/stream/poster/1/e5188b3a9f5542c08ffd0455156f6c88/pre.jpg
@@ -213,7 +196,6 @@ sources:
       browser_url: https://izvestiy-kamen.ru/vebkamera/
     add_ignore_tags:
       - chair
-      - sports ball
   bb_rnd_1:
     id: bb_rnd_1
     url: https://msk.rtsp.me/image/0WKoFCvy.jpg
@@ -358,298 +340,6 @@ sources:
       title: "Головная камера теплохода Княжна Виктория"
       browser_url: https://www.mosturflot.ru/ships/shipsonline
 
-  video_Khabarovsk:
-    id: video_Khabarovsk
-    url: https://www.youtube-nocookie.com/embed/ve1RSR-x1BU?autoplay=1
-    cache_time: 600
-    substitutions:
-      title: "Хабаровск. Поворотная камера на Доме Радио."
-      browser_url: https://www.youtube.com/watch?v=ve1RSR-x1BU
-    add_ignore_tags:
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-#  video_Bijsk:
-#    id: video_Bijsk
-#    url: https://www.youtube-nocookie.com/embed/2vBSKsPhRb8?autoplay=1
-#    cache_time: 600
-#    substitutions:
-#      title: "Бийск."
-#      browser_url: https://www.youtube.com/watch?v=2vBSKsPhRb8
-#    add_ignore_tags:
-#      - truck
-#      - train
-#      - clock
-#      - laptop
-#      - surfboard
-#      - kite
-#      - refrigerator
-
-  video_Valaam:
-    id: video_Valaam
-    url: https://open.ivideon.com/embed/v2/?server=100-f23bb709a7cb48fd8a46879da0ec6c9f&camera=0&width=&height=&lang=ru&ap=&noibw=
-    cache_time: 600
-    substitutions:
-      title: "Вид с колокольни Валаамского монастыря (северная сторона)"
-      browser_url: https://tv.ivideon.com/camera/100-f23bb709a7cb48fd8a46879da0ec6c9f/0/?lang=ru
-    add_ignore_tags:
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_Barnaul:
-    id: video_Barnaul
-    url: https://live.katun24.ru:8082/port_ptz/embed.html
-    cache_time: 600
-    substitutions:
-      title: "Барнаульский речной порт"
-      browser_url: https://live.katun24.ru:8082/port_ptz/embed.html
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_Aqua:
-    id: video_Aqua
-    url: https://www.youtube-nocookie.com/embed/muv29jLpEnA?autoplay=1
-    cache_time: 600
-    substitutions:
-      title: "Aquarium of the Pacific"
-      browser_url: https://www.youtube.com/watch?v=muv29jLpEnA
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_Novorossijsk:
-    id: video_Novorossijsk
-    url: https://www.youtube-nocookie.com/embed/akjT10sjPTc?autoplay=1
-    cache_time: 1800
-    substitutions:
-      title: "Новороссийск."
-      browser_url: https://www.youtube.com/watch?v=akjT10sjPTc
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_Nikolaev:
-    id: video_Nikolaev
-    url: https://www.youtube-nocookie.com/embed/NY6uNVXnRng?autoplay=1
-    cache_time: 1800
-    substitutions:
-      title: "Николаев. Набережная."
-      browser_url: https://www.youtube.com/watch?v=NY6uNVXnRng
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_Irtysh:
-    id: video_Irtysh
-    url: https://www.youtube-nocookie.com/embed/4s52YBddmIw?autoplay=1
-    cache_time: 1800
-    substitutions:
-      title: "Омск, слияние рек Омь и Иртыш."
-      browser_url: https://www.youtube.com/watch?v=4s52YBddmIw
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_Krasnoe:
-    id: video_Krasnoe
-    url: https://open.ivideon.com/embed/v2/?server=200-b4470ce9ebd0a32b613ebb2e82c378e6&camera=196608&width=1280&height=720&lang=ru&fs=&noibw=&ap=1
-    cache_time: 1800
-    substitutions:
-      title: "Красное на Волге."
-      browser_url: http://webcam-online.net/cam/paromnaya-pereprava-krasnoe-na-volge
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  bb_Petrozavodsk:
-    id: bb_Petrozavodsk
-    url: https://ohrana.sampo.ru/moigorod/thumb/423/big/image.jpg
-    cache_time: 1800
-    substitutions:
-      title: "Петрозаводск."
-      browser_url: https://moigorod.sampo.ru/stream/20
-
-  video_Ustug:
-    id: video_Ustug
-    url: https://www.youtube-nocookie.com/embed/BxoS0WJgYjs?autoplay=1
-    cache_time: 1800
-    substitutions:
-      title: "Великий Устюг."
-      browser_url: https://www.youtube.com/watch?v=BxoS0WJgYjs
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_UstKut:
-    id: video_UstKut
-    url: https://www.youtube-nocookie.com/embed/lufyRx7ACs8?autoplay=1
-    cache_time: 1800
-    substitutions:
-      title: "Усть-Кут."
-      browser_url: https://www.youtube.com/watch?v=lufyRx7ACs8
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-
-  video_Lensk:
-    id: video_Lensk
-    url: https://www.youtube-nocookie.com/embed/RjL1ByYJUo4?autoplay=1
-    cache_time: 1800
-    substitutions:
-      title: "Ленск."
-      browser_url: https://www.youtube.com/watch?v=RjL1ByYJUo4
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_Baikal:
-    id: video_Baikal
-    url: http://bm.isc.irk.ru/ajax/popup/?id=3
-    cache_time: 1800
-    substitutions:
-      title: "Исток Ангары (камера на водозаборной станции байкальского музея)."
-      browser_url: http://bm.isc.irk.ru/ajax/popup/?id=3
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  video_ArchDvina:
-    id: video_ArchDvina
-    url: https://playercdn.cdnvideo.ru/aloha/players/aao2_player.html
-    cache_time: 1800
-    substitutions:
-      title: "Архангельск, cобор на набережной Двины."
-      browser_url: https://playercdn.cdnvideo.ru/aloha/players/aao2_player.html
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  m3u8_Kolomna:
-    id: m3u8_Kolomna
-    url: https://msk.rtsp.me/l0SNUxhlEjOiC5iX-JMrCQ/1620819529/hls/j60tUEa7.m3u8
-    cache_time: 1
-    substitutions:
-      title: "Коломна."
-      browser_url: http://inkotel.ru/veb-kamery/
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-  m3u8_Tver:
-    id: m3u8_Tver
-    url: https://s1-obzor.tvhost.ru:20100/hls/107706/5590545f2b2b24222922/playlist.m3u8
-    cache_time: 1
-    substitutions:
-      title: "Тверь."
-      browser_url: https://tvhost.ru/тверь/веб-камеры.aspx
-    add_ignore_tags:
-      - motorcycle
-      - bus
-      - truck
-      - train
-      - clock
-      - laptop
-      - surfboard
-      - kite
-      - refrigerator
-
-
 targets:
   tg_alt_debug:
     id: "@altsoph"
@@ -668,32 +358,12 @@ targets:
     suffix: "_marked"
 
 chains:
-#  debug_chain:
-#    sources:
-#      - module: mod_htmlscreenshotdownloader
-#        source: video_Khabarovsk
-#        parameters:
-#          check_period: 300
-#    detector: mod_yolo3detector
-#    filters:
-#      - module: mod_conffilter
-#      - module: mod_tagfilter
-#    enhancers:
-#      - module: mod_boxerenhancer
-#    senders:
-#      - sender_module: mod_tgsender
-#        annotator_module: mod_templateannotator
-#        target: tg_alt_debug
-
   webcamwatcher:
     sources:
       # -
       #   module: mod_fakedownloader
       #   source: africam_Naledi
       #   parameters: {}
-
-      - module: mod_htmlscreenshotdownloader
-        source: video_Aqua
 
       - module: mod_simpledownloader
         source: wildpark_Baerencam
@@ -753,7 +423,7 @@ chains:
       - module: mod_manualfilter
         parameters:
           suppress_list:
-            - ["africam_Naledi", [0, 0, 1700, 1410], ["some", "bear"]]
+            - ["africam_Naledi", [0, 80, 700, 410], ["some", "bear"]]
       - module: mod_repeatfilter
         parameters:
           storage: wildlife
@@ -770,70 +440,6 @@ chains:
         target: dbg_folder
   boatbot:
     sources:
-      - module: mod_m3u8screenshotdownloader
-        source: m3u8_Kolomna
-        parameters:
-          check_period: 1800
-#      - module: mod_m3u8screenshotdownloader
-#        source: m3u8_Tver
-#        parameters:
-#          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_Lensk
-        parameters:
-          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_Ustug
-        parameters:
-          check_period: 1800
-#      - module: mod_htmlscreenshotdownloader
-#        source: video_UstKut
-#        parameters:
-#          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_Baikal
-        parameters:
-          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_ArchDvina
-        parameters:
-          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_Novorossijsk
-        parameters:
-          check_period: 1800
-#      - module: mod_htmlscreenshotdownloader
-#        source: video_Nikolaev
-#        parameters:
-#          check_period: 1800
-#      - module: mod_htmlscreenshotdownloader
-#        source: video_Irtysh
-#        parameters:
-#          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_Krasnoe
-        parameters:
-          check_period: 1800
-      - module: mod_simpledownloader
-        source: bb_Petrozavodsk
-        parameters:
-          check_period: 1800
-#      - module: mod_htmlscreenshotdownloader
-#        source: video_Khabarovsk
-#        parameters:
-#          check_period: 1800
-#      - module: mod_htmlscreenshotdownloader
-#        source: video_Bijsk
-#        parameters:
-#          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_Valaam
-        parameters:
-          check_period: 1800
-      - module: mod_htmlscreenshotdownloader
-        source: video_Barnaul
-        parameters:
-          check_period: 1800
       - module: mod_simpledownloader
         source: bb_tomsk_19
         parameters:
@@ -885,10 +491,6 @@ chains:
             - ["bb_tomsk_19", [0, 570, 2000, 1100], ["some", "train"]]
             - ["bb_ryb_1", [0, 123, 600, 340], ["boat", "truck"]] # bb_ryb_1
             - ["bb_rnd_2", [-10, 340, 800, 500], ["boat", "some"]] # bb_rnd_2
-            - ["video_Krasnoe", [0, 250, 1320, 750], ["boat", "train", "truck"]]
-            - ["video_Barnaul", [0, 200, 1225, 330], ["boat", "train", "truck"]]
-            - ["video_Novorossijsk", [690, 230, 910, 300], ["boat", "train", "truck"]]
-
       - module: mod_repeatfilter
         parameters:
           storage: boatbot
@@ -1044,4 +646,3 @@ chains:
   #       annotator_module: mod_templateannotator
   #       target: dbg_folder
   #
-
