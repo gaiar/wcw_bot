@@ -36,6 +36,7 @@ WORKDIR /app
 ADD . /app
 
 # Using pip:
+RUN apt-get update && apt-get install -y wget && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN python3 -m pip install wheel
 RUN python3 -m pip install -r requirements.txt
 RUN sh download_yolo.sh
