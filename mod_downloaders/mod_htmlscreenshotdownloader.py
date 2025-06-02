@@ -7,7 +7,7 @@ import urllib.request
 import time
 import selenium.webdriver
 import selenium.common
-from selenium.webdriver import Firefox, DesiredCapabilities, FirefoxProfile
+from selenium.webdriver import Firefox, FirefoxProfile
 from selenium.webdriver.firefox.options import Options
 
 from PIL import Image
@@ -23,10 +23,10 @@ class instance(proto_downloader):
         try:
             profile = FirefoxProfile()
             profile.set_preference("media.autoplay.default", 0)
-            cap = DesiredCapabilities.FIREFOX
 
             options = selenium.webdriver.firefox.options.Options()
             options.add_argument('--headless')
+            options.profile = profile
         except:
             logging.warning('Module "%s": error during FF init', __name__)
             return None
@@ -38,7 +38,7 @@ class instance(proto_downloader):
         waiting_time = source.get('waiting_time',7)
 
         try:
-            with selenium.webdriver.Firefox(firefox_profile=profile, capabilities=cap, options=options) as driver:
+            with selenium.webdriver.Firefox(options=options) as driver:
                 driver.get(url)
                 time.sleep(waiting_time)
 
