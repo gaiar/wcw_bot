@@ -23,9 +23,15 @@ class instance(proto_downloader):
         try:
             profile = FirefoxProfile()
             profile.set_preference("media.autoplay.default", 0)
+            profile.set_preference("dom.webnotifications.enabled", False)
+            profile.set_preference("media.volume_scale", "0.0")
 
             options = selenium.webdriver.firefox.options.Options()
             options.add_argument('--headless')
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_argument('--disable-gpu')
+            options.add_argument('--window-size=1920,1080')
             options.profile = profile
         except:
             logging.warning('Module "%s": error during FF init', __name__)
