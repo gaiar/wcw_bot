@@ -674,7 +674,7 @@ chains:
 #        source: video_Khabarovsk
 #        parameters:
 #          check_period: 300
-#    detector: mod_yolo3detector
+#    detector: mod_yolo4detector
 #    filters:
 #      - module: mod_conffilter
 #      - module: mod_tagfilter
@@ -745,7 +745,7 @@ chains:
       - module: mod_simpledownloader
         source: africam_Tembe
 
-    detector: mod_yolo3detector
+    detector: mod_yolo4detector
     filters:
       - module: mod_conffilter
       - module: mod_tagfilter
@@ -866,7 +866,7 @@ chains:
         source: bb_ryb_3
         parameters:
           check_period: 1800
-    detector: mod_yolo3detector
+    detector: mod_yolo4detector
     filters:
       - module: mod_conffilter
       - module: mod_tagfilter

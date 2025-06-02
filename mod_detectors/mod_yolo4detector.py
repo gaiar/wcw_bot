@@ -7,9 +7,9 @@ class instance(proto_detector):
     classes = None
     net = None
     def __init__(self,cfg):
-        with open('yolov3.txt', 'r') as f:
+        with open('yolov4.txt', 'r') as f:
             self.classes = [line.strip() for line in f.readlines()]
-        self.net = cv2.dnn.readNet('yolov3.weights', 'yolov3.cfg')
+        self.net = cv2.dnn.readNet('yolov4.weights', 'yolov4.cfg')
         super().__init__(cfg)
 
     # def _load_image_into_numpy_array(self,image):
@@ -30,7 +30,7 @@ class instance(proto_detector):
         # image_np = self._load_image_into_numpy_array(img)
         # print(image_np.shape)
         Height, Width, _ = image_np.shape
-        blob = cv2.dnn.blobFromImage(image_np, scale, (416,416), (0,0,0), True, crop=False)
+        blob = cv2.dnn.blobFromImage(image_np, scale, (608,608), (0,0,0), True, crop=False)
         self.net.setInput(blob)
         outs = self.net.forward(self._get_output_layers())
 
