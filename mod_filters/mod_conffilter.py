@@ -20,9 +20,20 @@ class instance(proto_filter):
 
         indices = cv2.dnn.NMSBoxes(boxes, confidences, min_confidence, nms_threshold)
         res = []
-        for idx in indices:
-            idx = idx[0]
-            res.append( [tags[idx],confidences[idx],boxes[idx]] )
-        res = list(zip(*res))
+        
+        # Handle case where no objects pass the thresholds
+        if indices is not None and len(indices) > 0:
+            for idx in indices:
+                # Handle OpenCV version compatibility
+                if hasattr(idx, '__len__') and len(idx) > 0:
+                    # Older OpenCV versions return 2D array [[index]]
+                    idx = idx[0]
+                # Newer OpenCV versions return flattened array [index]
+                res.append( [tags[idx],confidences[idx],boxes[idx]] )
+        
+        if res:
+            res = list(zip(*res))
+        else:
+            res = [[], [], []]
         logging.info('Module "%s": found tags %s.', __name__, str(res))
         return res        
