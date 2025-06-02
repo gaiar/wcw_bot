@@ -18,7 +18,16 @@ class instance(proto_detector):
 
     def _get_output_layers(self):
         layer_names = self.net.getLayerNames()
-        output_layers = [layer_names[i[0] - 1] for i in self.net.getUnconnectedOutLayers()]
+        unconnected_out_layers = self.net.getUnconnectedOutLayers()
+        
+        # Handle OpenCV version compatibility
+        if len(unconnected_out_layers.shape) == 1:
+            # OpenCV 4.5.1+ returns flattened array
+            output_layers = [layer_names[i - 1] for i in unconnected_out_layers]
+        else:
+            # Older OpenCV versions return 2D array
+            output_layers = [layer_names[i[0] - 1] for i in unconnected_out_layers]
+        
         return output_layers
 
     def get(self, image_np):
