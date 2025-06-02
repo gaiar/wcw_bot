@@ -1,5 +1,5 @@
 wheel
-numpy
+numpy>=1.21.0
 pyyaml
-pillow
+pillow>=8.0.0
 python-telegram-bot~=13.0
